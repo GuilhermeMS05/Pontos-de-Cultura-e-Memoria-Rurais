@@ -8,7 +8,7 @@ services:
     command: /var/www/dev/start.sh
 
     ports:
-      - "80:80"
+      - "8080:80"
     
     volumes:
       - ./docker-data/assets:/var/www/html/assets
@@ -22,6 +22,9 @@ services:
       # themes and plugins
       - ../plugins/SamplePlugin:/var/www/src/plugins/SamplePlugin
       - ../plugins/MultipleLocalAuth:/var/www/src/plugins/MultipleLocalAuth
+      - ../plugins/OcultarEntidades:/var/www/src/plugins/OcultarEntidades
+      - ../themes/SampleTheme:/var/www/src/themes/SampleTheme
+      - ../themes/NovoTema:/var/www/src/themes/NovoTema
 
     environment:
       - PENDING_PCACHE_RECREATION_INTERVAL=10
