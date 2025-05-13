@@ -12,7 +12,7 @@ services:
     
     volumes:
       - ./docker-data/assets:/var/www/html/assets
-      - ./docker-data/public-files:/var/www/html/files
+      - ./docker-data/public-f  iles:/var/www/html/files
       - ./docker-data/private-files:/var/www/var/private-files
       - ./docker-data/logs:/var/www/var/logs
 
@@ -22,8 +22,6 @@ services:
       # themes and plugins
       - ../plugins/SamplePlugin:/var/www/src/plugins/SamplePlugin
       - ../plugins/MultipleLocalAuth:/var/www/src/plugins/MultipleLocalAuth
-      - ../plugins/OcultarEntidades:/var/www/src/plugins/OcultarEntidades
-      - ../themes/SampleTheme:/var/www/src/themes/SampleTheme
       - ../themes/NovoTema:/var/www/src/themes/NovoTema
 
     environment:
@@ -34,6 +32,10 @@ services:
       - BUILD_ASSETS=1
       - MAILER_TRANSPORT=smtp://mailhog:1025
       - MAILER_FROM=sysadmin@localhost
+      - DISABLE_SPACES=true
+      - DISABLE_PROJECTS=true
+      - DISABLE_OPPORTUNITIES=true
+      - DISABLE_EVENTS=true
 
     depends_on:
       - db

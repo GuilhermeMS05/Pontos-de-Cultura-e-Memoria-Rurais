@@ -12,9 +12,6 @@ $this->import('
 ');
 ?>
 <home-header>
-    <home-header-content>
-        <p>sdfgsfgdsf</p>
-    </home-header-content>
 </home-header>
 <home-entities></home-entities>
 <home-map></home-map>

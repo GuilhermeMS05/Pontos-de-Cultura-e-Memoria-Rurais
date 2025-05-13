@@ -36,7 +36,7 @@ $this->import('
                     <?php $this->applyTemplateHook('mc-header-menu-home', 'begin') ?>
                     <a href="<?= $app->createUrl('site', 'index') ?>" class="mc-header-menu--item home">
                         <span class="icon"> <mc-icon name="home"></mc-icon> </span>
-                        <p class="label"> <?php i::_e('Home') ?> </p>
+                        <p class="label"> <?php i::_e('Página Inicial') ?> </p>
                     </a>
                     <?php $this->applyTemplateHook('mc-header-menu-home', 'end') ?>
                 </li>
@@ -47,22 +47,11 @@ $this->import('
                     <?php $this->applyTemplateHook('mc-header-menu-agent', 'begin') ?>
                     <a href="<?= $app->createUrl('search', 'agents') ?>" class="mc-header-menu--item agent">
                         <span class="icon"> <mc-icon name="agent-2"> </span>
-                        <p class="label"> <?php i::_e('Agentes') ?> </p>
+                        <p class="label"> <?php i::_e('Entidades/Coletivos') ?> </p>
                     </a>
                     <?php $this->applyTemplateHook('mc-header-menu-agent', 'end') ?>
                 </li>
                 <?php $this->applyTemplateHook('mc-header-menu-agent', 'after') ?>
-
-                <?php $this->applyTemplateHook('mc-header-menu-spaces', 'before') ?>
-                <li v-if="global.enabledEntities.spaces">
-                    <?php $this->applyTemplateHook('mc-header-menu-spaces', 'begin') ?>
-                    <a href="<?= $app->createUrl('search', 'spaces') ?>" class="mc-header-menu--item space">
-                        <span class="icon"> <mc-icon name="space"> </span>
-                        <p class="label"> <?php i::_e('Espaços') ?> </p>
-                    </a>
-                    <?php $this->applyTemplateHook('mc-header-menu-spaces', 'end') ?>
-                </li>
-                <?php $this->applyTemplateHook('mc-header-menu-spaces', 'after') ?>
                 
                 <?php $this->applyTemplateHook('mc-header-menu', 'end') ?>
             </template>

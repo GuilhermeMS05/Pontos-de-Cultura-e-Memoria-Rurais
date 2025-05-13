@@ -13,7 +13,43 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         $app = App::i();
 
-        
+        $app->hook('template(<<*>>.body):end', function () use ($app) {
+            $desc = $app->config['home.header.description'];
+            echo "<script>
+                const newDescription = ".json_encode($desc).";
+                const interval = setInterval(() => {
+                    const el = document.querySelector('.home-header__description');
+                    if (el) {
+                        el.innerText = newDescription;
+                        clearInterval(interval);
+                    }
+                }, 100); // checa a cada 100ms
+            </script>";
+
+            $titulo = $app->config['home.header.title'] ?? 'Bem-vindo!';
+            echo "<script>
+                const newTitle = ".json_encode($titulo).";
+                const intervalTitle = setInterval(() => {
+                    const el = document.querySelector('.home-header__title');
+                    if (el) {
+                        el.innerText = newTitle;
+                        clearInterval(intervalTitle);
+                    }
+                }, 100);
+            </script>";
+        });
+
+
+        // Manifest do five icon
+        $app->hook('GET(site.webmanifest)', function() use ($app) {
+            /** @var \MapasCulturais\Controller $this */
+            $this->json([
+                'icons' => [
+                    [ 'src' => $app->view->asset('img/favicon-192x192.png', false), 'type' => 'image/png', 'sizes' => '192x192' ],
+                    [ 'src' => $app->view->asset('img/favicon-512x512.png', false), 'type' => 'image/png', 'sizes' => '512x512' ]
+                ],
+            ]);
+        });
 
         //$app->hook('template(agent.<<create|edit|single>>.tab-about):begin', function() {
             //$this->part('num_filhos', ['entity' => $this->data->entity]);
