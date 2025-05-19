@@ -9,4 +9,7 @@ return [
     */
     'logo.image' => './img/logo-site.png',
     'logo.hideLabel' => env('LOGO_HIDELABEL', true),
+    'app.enabled.seals' => 'false',
+    'notifications.entities.created' => 1,
+    'notifications.entities.update' => 1,
 ];

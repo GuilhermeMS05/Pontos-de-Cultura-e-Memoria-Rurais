@@ -59,15 +59,26 @@ $home-register: #044cb8;
 
 @import '../../../BaseV2/assets-src/sass/theme-BaseV2';
 
-/*.mc-header-logo {
+.mc-header-logo {
     max-width: 9rem;
 }
-.main-footer__reg {
+/*.main-footer__reg {
   display: none;
 }
 .topo-togov-wrapper {
   display: none;
 }*/
+
+.home-header__content {
+  position: relative;
+  padding: 1.875rem 1.5625rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 3.875rem;
+  align-items: center;
+  min-height: 600px;
+}
+
 :root {
   --mc-home-developers: #F5F5F5;
   --mc-home-entities: #F5F5F5;
@@ -155,3 +166,4 @@ $home-register: #044cb8;
   --mc-font-size-xxs: 0.875rem;
   --mc-font-size-xxxs: 0.75rem;
 }
+
