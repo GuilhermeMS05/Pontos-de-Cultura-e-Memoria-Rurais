@@ -41,6 +41,8 @@ services:
       - ./docker-data/logs:/var/www/var/logs
 
       - ./docker/production/config.d:/var/www/config/prod.d
+      - ../plugins/MultipleLocalAuth:/var/www/src/plugins/MultipleLocalAuth
+      - ../themes/NovoTema:/var/www/src/themes/NovoTema
     links:
       - db
       - redis
@@ -48,6 +50,7 @@ services:
     environment:
       - REDIS_CACHE=redis
       - SESSIONS_SAVE_PATH=tcp://sessions:6379
+      - ACTIVE_THEME=NovoTema
 
     depends_on:
       - db

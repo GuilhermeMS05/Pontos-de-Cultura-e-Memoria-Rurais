@@ -6,7 +6,7 @@
 
 $this->import('
     home-header
-    home-entities
+    home-entities   
     home-developers
     home-map
 ');
