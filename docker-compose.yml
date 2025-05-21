@@ -23,7 +23,15 @@ services:
       - mapasculturais
     links:
       - mapasculturais
-  
+
+  php:
+    image: php:8.2-fpm
+    volumes:
+      - ./docker-data/public-files:/var/www/html/files
+      - ./docker-data/assets:/var/www/html/assets
+    links:
+      - mapasculturais
+
   mapasculturais:
     env_file:
       - .env
@@ -81,6 +89,10 @@ services:
       - ./docker/db:/docker-entrypoint-initdb.d
       - ./docker-data/db-data:/var/lib/postgresql/data
     
+  networks:
+    default:
+      name: mapas-network
+      driver: bridge
 
 ## Em ambiente de homologação pode ser uma boa ideia utilizar o mailhog para testar 
 ## o envio de emails e também prevenir que emails de tete sejam disparados acidentalmente 
