@@ -49,8 +49,8 @@ services:
       - ./docker-data/logs:/var/www/var/logs
 
       - ./docker/production/config.d:/var/www/config/prod.d
-      - ../plugins/MultipleLocalAuth:/var/www/src/plugins/MultipleLocalAuth
-      - ../themes/NovoTema:/var/www/src/themes/NovoTema
+      - ./plugins/MultipleLocalAuth:/var/www/src/plugins/MultipleLocalAuth
+      - ./themes/NovoTema:/var/www/src/themes/NovoTema
     links:
       - db
       - redis
