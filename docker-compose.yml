@@ -58,6 +58,10 @@ services:
       - ACTIVE_THEME=NovoTema
       - REDIS_CACHE=redis
       - SESSIONS_SAVE_PATH=tcp://sessions:6379
+      - DISABLE_SPACES=true
+      - DISABLE_PROJECTS=true
+      - DISABLE_OPPORTUNITIES=true
+      - DISABLE_EVENTS=true
 
     depends_on:
       - db
