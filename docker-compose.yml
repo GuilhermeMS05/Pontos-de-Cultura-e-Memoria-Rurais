@@ -48,9 +48,10 @@ services:
       - redis
       - sessions
     environment:
+      - APP_MODE=production
+      - ACTIVE_THEME=NovoTema
       - REDIS_CACHE=redis
       - SESSIONS_SAVE_PATH=tcp://sessions:6379
-      - ACTIVE_THEME=NovoTema
 
     depends_on:
       - db
