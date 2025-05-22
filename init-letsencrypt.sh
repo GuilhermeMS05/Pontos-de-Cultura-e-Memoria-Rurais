@@ -9,7 +9,7 @@ echo "EDITE ESTE ARQUIVO E DEFINA AS VARIÁVEIS domain, email e staging"
 exit; # E APAGUE ESSA LINHA
 
 # Domínio da instalação
-domain=(redenacionaldepontosdeculturaememoriarurais.com)
+domain=(mapas.redenacionaldepontosdeculturaememoriarurais.com)
 
 # Informe um e-mail válido
 email="redepontosdeculturarurais@gmail.com"
