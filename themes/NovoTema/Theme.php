@@ -169,6 +169,43 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
                 'required' => 'Campo obrigatório'
             ]
         ));
+
+        $this->registerAgentMetadata('impactos_mudancas_climaticas', array(
+            'label' => 'Como a experiência percebe os impactos das mudanças climáticas no território?',
+            'type' => 'multiselect',
+            'options' => [
+                'Diminuição da produção',
+                'Perda de produção',
+                'Diminuição das chuvas',
+                'Aumento das chuvas',
+                'Alteração no calendário de chuvas',
+                'Chuvas extremas',
+                'Diminuição da disponibilidade hídrica',
+                'Maiores distâncias para acesso à água',
+                'Deslizamento de áreas',
+                'Aumento da temperatura',
+                'Alteração nas estações (prolongamento/diminuição das estações)',
+                'Alagamento de áreas',
+                'Erosão do solo',
+                'Desertificação',
+                'Desaparecimento de espécies e variedades vegetais nativas',
+                'Desaparecimento de espécies e variedades animais nativas',
+                'Desaparecimento de espécies e variedades vegetais agrícolas',
+                'Desaparecimento de espécies e variedades animais (criação animal)',
+                'Aumento de plantas espontâneas',
+                'Aumento de doenças nas plantas (moscas, protozoários, fungos etc)',
+                'Aumento de doenças nas criações animais',
+                'Aumento de doenças nos humanos (cardíacas, diminuição de imunidade, adoecimento mental)',
+                'Piora na qualidade do ar',
+                'Não há efeitos das mudanças climáticas no território.',
+                'Não sei aferir',
+                'Outras'
+            ],
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
+        ));
+        
         
         $this->registerAgentMetadata('quantas_pessoas_beneficiadas_por_mes', array(
             'label' => 'Quantas pessoas a experiência beneficia diretamente por mês?',
@@ -187,7 +224,6 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
                 'required' => 'Campo obrigatório'
             ]
         ));
-        
         // Informacoes adicionais
         
         // Diagnóstico - Representantes da Organização
