@@ -146,6 +146,48 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
                 'required' => 'Campo obrigatório'
             ]
         ));
+
+        $this->registerAgentMetadata('quais_acoes_foram_desenvolvidos', array(
+            'label' => 'Qual(is) ação(ões) ou produto(s) de comunicação foi(ram) desenvolvido(s)?',
+            'type' => 'multiselect',
+            'options' => [
+                'Organização de rede de comunicadoras/es populares',
+                'Estratégia corpo-a-corpo de comunicação',
+                'Produção de cartaz, folder ou banner',
+                'Produção de matérias',
+                'Produção de vídeos',
+                'Produção de podcast',
+                'Divulgação nas redes sociais',
+                'Produção de revista',
+                'Produção de artigos acadêmicos',
+                'Produção de livro ou cartilha',
+                'Assessoria de imprensa',
+                'Outros',
+                'Não foi desenvolvida nenhuma ação ou produto de comunicação'
+            ],
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
+        ));
+        
+        $this->registerAgentMetadata('quantas_pessoas_beneficiadas_por_mes', array(
+            'label' => 'Quantas pessoas a experiência beneficia diretamente por mês?',
+            'type' => 'select',
+            'options' => [
+                'de 1 a 20',
+                'de 21 a 50',
+                'de 51 a 100',
+                'de 101 a 300',
+                'de 301 e 500',
+                'de 501 a 1000',
+                'mais de 1000',
+                'Não é possível aferir'
+            ],
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
+        ));
+        
         // Informacoes adicionais
         
         // Diagnóstico - Representantes da Organização

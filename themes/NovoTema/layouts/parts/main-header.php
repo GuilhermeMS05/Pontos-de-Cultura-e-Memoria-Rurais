@@ -47,11 +47,22 @@ $this->import('
                     <?php $this->applyTemplateHook('mc-header-menu-agent', 'begin') ?>
                     <a href="<?= $app->createUrl('search', 'agents') ?>" class="mc-header-menu--item agent">
                         <span class="icon"> <mc-icon name="agent-2"> </span>
-                        <p class="label"> <?php i::_e('Entidades/Coletivos') ?> </p>
+                        <p class="label"> <?php i::_e('Organizações e Coletivos') ?> </p>
                     </a>
                     <?php $this->applyTemplateHook('mc-header-menu-agent', 'end') ?>
                 </li>
                 <?php $this->applyTemplateHook('mc-header-menu-agent', 'after') ?>
+
+                <!-- <?php //$this->applyTemplateHook('mc-header-menu', 'before') ?>
+                <li>
+                    <?php //$this->applyTemplateHook('mc-header-menu', 'begin') ?>
+                    <a href="https://www.redenacionaldepontosdeculturaememoriarurais.com/" target="_blank" class="mc-header-menu--item">
+                        <span class="icon"> <mc-icon name="agent-2"> </span>
+                        <p class="label"> <?php //i::_e('Site da Rede') ?> </p>
+                    </a>
+                    <?php //$this->applyTemplateHook('mc-header-menu', 'end') ?>
+                </li>
+                <?php //$this->applyTemplateHook('mc-header-menu', 'after') ?> -->
                 
                 <?php $this->applyTemplateHook('mc-header-menu', 'end') ?>
             </template>
