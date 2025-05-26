@@ -53,16 +53,25 @@ $this->import('
                 </li>
                 <?php $this->applyTemplateHook('mc-header-menu-agent', 'after') ?>
 
-                <!-- <?php //$this->applyTemplateHook('mc-header-menu', 'before') ?>
+                <?php $this->applyTemplateHook('mc-header-menu', 'before') ?>
                 <li>
-                    <?php //$this->applyTemplateHook('mc-header-menu', 'begin') ?>
-                    <a href="https://www.redenacionaldepontosdeculturaememoriarurais.com/" target="_blank" class="mc-header-menu--item">
-                        <span class="icon"> <mc-icon name="agent-2"> </span>
-                        <p class="label"> <?php //i::_e('Site da Rede') ?> </p>
+                    <?php $this->applyTemplateHook('mc-header-menu', 'begin') ?>
+                    <a href="agentes/#map" class="mc-header-menu--item opportunity">
+                        <span class="icon"> <mc-icon name="map"></mc-icon> </span>
+                        <p class="label"> <?php i::_e('Mapa') ?> </p>
                     </a>
-                    <?php //$this->applyTemplateHook('mc-header-menu', 'end') ?>
                 </li>
-                <?php //$this->applyTemplateHook('mc-header-menu', 'after') ?> -->
+                <?php $this->applyTemplateHook('mc-header-menu', 'after') ?>
+
+                <?php $this->applyTemplateHook('mc-header-menu', 'before') ?>
+                <li>
+                    <?php $this->applyTemplateHook('mc-header-menu', 'begin') ?>
+                    <a href="https://www.redenacionaldepontosdeculturaememoriarurais.com/" target="_blank" class="mc-header-menu--item space">
+                        <span class="icon"> <mc-icon name="spaces"></mc-icon> </span>
+                        <p class="label"> <?php i::_e('Site da Rede') ?> </p>
+                    </a>
+                </li>
+                <?php $this->applyTemplateHook('mc-header-menu', 'after') ?>
                 
                 <?php $this->applyTemplateHook('mc-header-menu', 'end') ?>
             </template>
