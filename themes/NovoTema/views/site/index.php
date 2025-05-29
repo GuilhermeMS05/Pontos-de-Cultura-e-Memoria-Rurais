@@ -9,6 +9,7 @@ $this->import('
     home-entities   
     home-developers
     home-map
+    mc-card
 ');
 ?>
 <home-header>

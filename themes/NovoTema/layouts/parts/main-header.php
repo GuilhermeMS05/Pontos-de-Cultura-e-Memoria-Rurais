@@ -56,7 +56,7 @@ $this->import('
                 <?php $this->applyTemplateHook('mc-header-menu', 'before') ?>
                 <li>
                     <?php $this->applyTemplateHook('mc-header-menu', 'begin') ?>
-                    <a href="agentes/#map" class="mc-header-menu--item opportunity">
+                    <a href="https://mapas.redenacionaldepontosdeculturaememoriarurais.com/agentes/#map" class="mc-header-menu--item opportunity">
                         <span class="icon"> <mc-icon name="map"></mc-icon> </span>
                         <p class="label"> <?php i::_e('Mapa') ?> </p>
                     </a>
