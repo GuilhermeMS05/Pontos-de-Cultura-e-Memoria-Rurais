@@ -779,7 +779,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
                 'required' => 'Campo obrigatório'
             ]
         ));
-        $this->registerAgentMetadata('problemas_saude_devido_qualidade_agua ', array(
+        $this->registerAgentMetadata('problemas_saude_devido_qualidade_agua', array(
             'label' => 'Quais problemas de saúde, se houver, foram associados à qualidade da água na sua região?',
             'type' => 'text',
             'validations' => [
