@@ -21,7 +21,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
                 const interval = setInterval(() => {
                     const el = document.querySelector('.home-header__description');
                     if (el) {
-                        el.innerHTML = '<span style=\"color:rgb(255, 123, 0); font-size: 18px; font-weight: bold;\">' + newDescription + '</span>';
+                        el.innerHTML = '<span style=\"color: white; font-size: 18px; font-weight: bold;\">' + newDescription + '</span>';
                         clearInterval(interval);
                     }
                 }, 100); // checa a cada 100ms
@@ -33,7 +33,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
                 const intervalTitle = setInterval(() => {
                     const el = document.querySelector('.home-header__title');
                     if (el) {
-                        el.innerHTML = '<span style=\"color: #77c14e; font-size: 32px; margin-botton: 120px;\">' + newTitle + '</span>';
+                        el.innerHTML = '<span style=\"color: white; font-size: 32px; margin-botton: 120px;\">' + newTitle + '</span>';
                         clearInterval(intervalTitle);
                     }
                 }, 100);
