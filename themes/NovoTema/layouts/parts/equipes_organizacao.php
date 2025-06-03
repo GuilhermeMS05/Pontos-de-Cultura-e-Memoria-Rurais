@@ -17,11 +17,15 @@ $this->import('
         </mc-card__title>
         <?php 
         $fields = [
-            'orientacao_sexual_equipe_organizacao', 
+            'orientacao_sexual_equipe_organizacao',
+            'orientacao_sexual_equipe_organizacao_outra',
             'identidade_genero_equipe_organizacao',
+            'identidade_genero_equipe_organizacao_outra',
             'raca_cor_etnia_equipe_organizacao',
+            'raca_cor_etnia_equipe_organizacao_outro',
             'deficiencia_equipe_organizacao',
             'quais_pessoas_participam_equipe_organizacao',
+            'quais_pessoas_participam_equipe_organizacao_outras',
             'quais_vinculos_trabalho_equipe_organizacao'
         ]; 
         ?>

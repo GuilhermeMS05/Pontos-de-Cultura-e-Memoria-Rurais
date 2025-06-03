@@ -15,7 +15,7 @@ $this->import('
         <mc-card__title>
             <h3>Informações adicionais</h3>
         </mc-card__title>
-        <?php $fields = ['sede_situada', 'atuacao_regioes_rurais', 'historico_organizacao', 'quais_acoes_foram_desenvolvidos', 'impactos_mudancas_climaticas', 'quantas_pessoas_beneficiadas_por_mes']; ?>
+        <?php $fields = ['sede_situada', 'atuacao_regioes_rurais', 'historico_organizacao', 'quais_acoes_foram_desenvolvidos', 'quais_acoes_foram_desenvolvidos_outros', 'impactos_mudancas_climaticas', 'impactos_mudancas_climaticas_outras', 'quantas_pessoas_beneficiadas_por_mes']; ?>
         
         <?php foreach ($fields as $field): ?>
             <?php if($this->isEditable() || $entity->$field): ?>

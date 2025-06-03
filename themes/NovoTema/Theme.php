@@ -170,6 +170,11 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
             ]
         ));
 
+        $this->registerAgentMetadata('quais_acoes_foram_desenvolvidos_outros', array(
+            'label' => 'Outros quais?',
+            'type' => 'text'
+        ));
+
         $this->registerAgentMetadata('impactos_mudancas_climaticas', array(
             'label' => 'Como a experiência percebe os impactos das mudanças climáticas no território?',
             'type' => 'multiselect',
@@ -206,6 +211,11 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
             ]
         ));
 
+        $this->registerAgentMetadata('impactos_mudancas_climaticas_outras', array(
+            'label' => 'Outras quais?',
+            'type' => 'text'
+        ));
+
         $this->registerAgentMetadata('quantas_pessoas_beneficiadas_por_mes', array(
             'label' => 'Quantas pessoas a experiência beneficia diretamente por mês?',
             'type' => 'select',
@@ -238,34 +248,43 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         $this->registerAgentMetadata('funcao_exerce_organizacao', array(
             'label' => 'Qual função você exerce na organização?',
             'type' => 'select',
-            'options' => ['Diretoria', 'Cordenador (a)', 'Educador (a)', 'Arte Educador (a)', 'Outra'],
-            'allowOther' => true,
-            'allowOtherText' => 'Especifique a função',
+            'options' => ['Diretoria', 'Coordenador (a)', 'Educador (a)', 'Arte Educador (a)', 'Outra'],
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
         ));
 
+        $this->registerAgentMetadata('funcao_exerce_organizacao_outra', array(
+            'label' => 'Outra qual?',
+            'type' => 'text'
+        ));
+        
         $this->registerAgentMetadata('orientacao_sexual_organizacao', array(
             'label' => 'Assinale qual sua orientação sexual',
             'type' => 'select',
             'options' => ['Heterossexual', 'Homossexual', 'Lésbica', 'Bissexual', 'Prefiro não declarar', 'Outra'],
-            'allowOther' => true,
-            'allowOtherText' => 'Outra qual?',
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
+        ));
+
+        $this->registerAgentMetadata('orientacao_sexual_organizacao_outra', array(
+            'label' => 'Outra qual?',
+            'type' => 'text'
         ));
 
         $this->registerAgentMetadata('identidade_genero_organizacao', array(
             'label' => 'Assinale sua identidade de gênero (Cisgênero e transgênero: termos usados para caracterizar identidades de gênero de forma mais ampla. Pessoa cisgênera: se identifica com o gênero que lhe foi atribuído ao nascer (feminino/mulher cisgênera; masculino/homem cisgênero). Pessoa transgênera: se identifica (ou pode se identificar, a partir de determinado momento da vida) com um gênero diferente daquele que lhe foi atribuído ao nascer. Ou seja, ao nascer, por seu sexo biológico, uma pessoa pode ser considerada de um gênero — homem/masculino, por exemplo —, mas esse gênero não corresponde a como ela se encara e se identifica; nesse caso, essa pessoa trans pode se identificar como feminina/mulher, entre outras possibilidades.)',
             'type' => 'select',
             'options' => ['Mulher Cisgênero', 'Homem Cisgênero', 'Mulher Transgênero', 'Homem Transgênero', 'Travesti', 'Não binário', 'Prefiro não declarar', 'Outra'],
-            'allowOther' => true,
-            'allowOtherText' => 'Outra qual?',
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
+        ));
+
+        $this->registerAgentMetadata('identidade_genero_organizacao_outra', array(
+            'label' => 'Outra qual?',
+            'type' => 'text'
         ));
 
         $this->registerAgentMetadata('idade_organizacao', array(
@@ -280,12 +299,15 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         $this->registerAgentMetadata('raca_cor_etnia_organizacao', array(
             'label' => 'Qual sua Raça/Cor/Etnia',
             'type' => 'select',
-            'options' => ['Preto', 'Pardo', 'Branco', 'Indígena', 'Cigano', 'Amarelo', 'Não sei responder', 'Outro: '],
-            'allowOther' => true,
-            'allowOtherText' => 'Outra qual?',
+            'options' => ['Preto', 'Pardo', 'Branco', 'Indígena', 'Cigano', 'Amarelo', 'Não sei responder', 'Outro'],
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
+        ));
+
+        $this->registerAgentMetadata('raca_cor_etnia_organizacao_outro', array(
+            'label' => 'Outro qual?',
+            'type' => 'text'
         ));
 
         $this->registerAgentMetadata('vinculo_trabalho_organizacao', array(
@@ -353,35 +375,44 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         // Diagnóstico - Equipes da Organização
         $this->registerAgentMetadata('orientacao_sexual_equipe_organizacao', array(
             'label' => 'Assinale as orientações sexuais presentes na equipe da organização',
-            'type' => 'multiselect',
-            'options' => ['Heterossexual', 'Homossexual', 'Lésbica', 'Bissexual', 'Prefiro não declarar', 'Outra'],
-            'allowOther' => true,
             'allowOtherText' => 'Outra qual?',
+            'options' => ['Heterossexual', 'Homossexual', 'Lésbica', 'Bissexual', 'Prefiro não declarar', 'Outras'],
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
+        ));
+
+        $this->registerAgentMetadata('orientacao_sexual_equipe_organizacao_outra', array(
+            'label' => 'Outras quais?',
+            'type' => 'text'
         ));
 
         $this->registerAgentMetadata('identidade_genero_equipe_organizacao', array(
             'label' => 'Assinale quais identidade de gênero estão presentes na equipe da organização. (Cisgênero e transgênero: termos usados para caracterizar identidades de gênero de forma mais ampla. Pessoa cisgênera: se identifica com o gênero que lhe foi atribuído ao nascer (feminino/mulher cisgênera; masculino/homem cisgênero). Pessoa transgênera: se identifica (ou pode se identificar, a partir de determinado momento da vida) com um gênero diferente daquele que lhe foi atribuído ao nascer. Ou seja, ao nascer, por seu sexo biológico, uma pessoa pode ser considerada de um gênero — homem/masculino, por exemplo —, mas esse gênero não corresponde a como ela se encara e se identifica; nesse caso, essa pessoa trans pode se identificar como feminina/mulher, entre outras possibilidades.)',
             'type' => 'multiselect',
-            'options' => ['Mulher Cisgênero', 'Homem Cisgênero', 'Mulher Transgênero', 'Homem Transgênero', 'Travesti', 'Não binário', 'Prefiro não declarar', 'Outra'],
-            'allowOther' => true,
-            'allowOtherText' => 'Outra qual?',
+            'options' => ['Mulher Cisgênero', 'Homem Cisgênero', 'Mulher Transgênero', 'Homem Transgênero', 'Travesti', 'Não binário', 'Prefiro não declarar', 'Outras'],
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
         ));
 
+        $this->registerAgentMetadata('identidade_genero_equipe_organizacao_outra', array(
+            'label' => 'Outras quais?',
+            'type' => 'text'
+        ));
+
         $this->registerAgentMetadata('raca_cor_etnia_equipe_organizacao', array(
             'label' => 'Na organização estão presentes quais composições de Raça/Cor/Etnia?',
             'type' => 'multiselect',
-            'options' => ['Preto', 'Pardo', 'Branco', 'Indígena', 'Cigano', 'Amarelo', 'Não sei responder', 'Outro: '],
-            'allowOther' => true,
-            'allowOtherText' => 'Outra qual?',
+            'options' => ['Preto', 'Pardo', 'Branco', 'Indígena', 'Cigano', 'Amarelo', 'Não sei responder', 'Outros'],
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
+        ));
+
+        $this->registerAgentMetadata('raca_cor_etnia_equipe_organizacao_outro', array(
+            'label' => 'Outros quais?',
+            'type' => 'text'
         ));
 
         $this->registerAgentMetadata('deficiencia_equipe_organizacao', array(
@@ -396,12 +427,15 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         $this->registerAgentMetadata('quais_pessoas_participam_equipe_organizacao', array(
             'label' => 'Assinale quais pessoas participam da coordenação ou direção da organização',
             'type' => 'multiselect',
-            'options' => ['Mulheres', 'Negros e negras', 'Indígenas (Povo Originário)', 'Quilombola (Povo Afro-Brasileiro)', 'Caiçaras, Ciganos, Quebradeiras de Coco, erveiras ou outros povos tradicionais', 'Pessoa com deficiência', 'Outras '],
-            'allowOther' => true,
-            'allowOtherText' => 'Outra qual?',
+            'options' => ['Mulheres', 'Negros e negras', 'Indígenas (Povo Originário)', 'Quilombola (Povo Afro-Brasileiro)', 'Caiçaras, Ciganos, Quebradeiras de Coco, erveiras ou outros povos tradicionais', 'Pessoa com deficiência', 'Outras'],
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
+        ));
+
+        $this->registerAgentMetadata('quais_pessoas_participam_equipe_organizacao_outras', array(
+            'label' => 'Outras quais?',
+            'type' => 'text'
         ));
 
         $this->registerAgentMetadata('quais_vinculos_trabalho_equipe_organizacao', array(
@@ -462,12 +496,22 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         $this->registerAgentMetadata('programa_faz_parte_organizacao', array(
             'label' => 'De quais programas a sua organização faz parte?',
             'type' => 'multiselect',
-            'options' => ['Pontões de Cultura', 'Escola Viva', 'Griô', 'Rede', 'Teia', 'Cultura Digital', 'Comitê de Cultura', 'Agente Cultura Viva', 'Plano Nacional de Cultura', 'Sistema Nacional de Cultura', 'Agente Territorial de Cultura', 'Fórum Estadual de Pontos de Cultura', 'Fórum Nacional de Pontos de Cultura', 'Outro:'],
+            'options' => ['Pontões de Cultura', 'Escola Viva', 'Griô', 'Rede', 'Teia', 'Cultura Digital', 'Comitê de Cultura', 'Agente Cultura Viva', 'Plano Nacional de Cultura', 'Sistema Nacional de Cultura', 'Agente Territorial de Cultura', 'Fórum Estadual de Pontos de Cultura', 'Fórum Nacional de Pontos de Cultura', 'Outros'],
             'allowOther' => true,
             'allowOtherText' => 'Outra qual?',
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
+        ));
+
+        $this->registerAgentMetadata('programa_faz_parte_organizacao_outro', array(
+            'label' => 'Outros quais?',
+            'type' => 'text'
+        ));
+
+        $this->registerAgentMetadata('quais_pessoas_participam_equipe_organizacao_outras', array(
+            'label' => 'Outras quais?',
+            'type' => 'text'
         ));
 
         $this->registerAgentMetadata('escala_atuacao_organizacao', array(
@@ -490,15 +534,23 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
             ]
         ));
 
+        $this->registerAgentMetadata('territorio_povos_comunidades_organizacao_outro', array(
+            'label' => 'Outro qual?',
+            'type' => 'text'
+        ));
+
         $this->registerAgentMetadata('infraestrutura_presente_organizacao', array(
             'label' => 'Qual a infraestrutura presente na organização?',
             'type' => 'multiselect',
             'options' => ['Energia elétrica', 'Água encanada', 'Telefone fixo', 'Internet banda larga', 'Celular', 'Outras'],
-            'allowOther' => true,
-            'allowOtherText' => 'Outras quais?',
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
+        ));
+
+        $this->registerAgentMetadata('infraestrutura_presente_organizacao_outra', array(
+            'label' => 'Outras quais?',
+            'type' => 'text'
         ));
 
         $this->registerAgentMetadata('linguagens_artisticas_organizacao', array(
@@ -541,22 +593,28 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
             'label' => 'Onde a organização realiza as atividades?',
             'type' => 'multiselect',
             'options' => ['Sede própria', 'Escolas e espaços parceiros', 'Espaços públicos', 'Outros'],
-            'allowOther' => true,
-            'allowOtherText' => 'Outros quais?',
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
+        ));
+
+        $this->registerAgentMetadata('realiza_atividades_organizacao_outro', array(
+            'label' => 'Outros quais?',
+            'type' => 'text'
         ));
 
         $this->registerAgentMetadata('sede_propria_condicao_organizacao', array(
             'label' => 'Caso tenha sede própria, qual a condição do imóvel onde se situa a organização?',
             'type' => 'select',
             'options' => ['cedido pro empresa privada', 'cedido por instituição de educação privada', 'cedido por pessoa física', 'alugado', 'cedido por ONG', 'próprio', 'cedido por instituição de educação pública', 'cedido por instituição de classe', 'cedido por órgão público', 'Outros…'],
-            'allowOther' => true,
-            'allowOtherText' => 'Outros quais?',
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
+        ));
+
+        $this->registerAgentMetadata('sede_propria_condicao_organizacao_outro', array(
+            'label' => 'Outros quais?',
+            'type' => 'text'
         ));
 
         $this->registerAgentMetadata('sede_propria_dificuldades_organizacao', array(
@@ -571,40 +629,49 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         $this->registerAgentMetadata('sede_propria_espacos_organizacao', array(
             'label' => 'Caso tenha sede própria, quais espaços ela oferece?',
             'type' => 'multiselect',
-            'options' => ['Sala de Aula', 'Sala de Projeção', 'Laboratório de Informática', 'Biblioteca', 'Sala de exposição', 'Auditório', 'Ateliêr', 'Palco tablado', 'Teatro/Arena', 'Estúdio de Música', 'Quadra de esportes', 'Brinquedoteca', 'Discoteca', 'Laboratório de fotografia', 'Camping', 'Alojamento', 'Horta', 'Área aberta', 'Sala de atendimento', 'Espaço de memória/Centro de Memória/Museu Rural/Ecomuseu', 'Outro:'],
-            'allowOther' => true,
-            'allowOtherText' => 'Outro qual?',
+            'options' => ['Sala de Aula', 'Sala de Projeção', 'Laboratório de Informática', 'Biblioteca', 'Sala de exposição', 'Auditório', 'Ateliêr', 'Palco tablado', 'Teatro/Arena', 'Estúdio de Música', 'Quadra de esportes', 'Brinquedoteca', 'Discoteca', 'Laboratório de fotografia', 'Camping', 'Alojamento', 'Horta', 'Área aberta', 'Sala de atendimento', 'Espaço de memória/Centro de Memória/Museu Rural/Ecomuseu', 'Outros'],
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
+        ));
+
+        $this->registerAgentMetadata('sede_propria_espacos_organizacao_outro', array(
+            'label' => 'Outros quais?',
+            'type' => 'text'
         ));
 
         $this->registerAgentMetadata('itens_presentes_organizacao', array(
             'label' => 'Assinale os itens presentes na organização',
             'type' => 'multiselect',
-            'options' => ['Instrumentos musicais', 'Equipamento de Som', 'Mesa de som', 'Leitor de DVD/vhs', 'Televisão ', 'Câmera filmadora', 'Projetores', 'Desktops', 'Laptops', 'Servidores de internet', 'Retroprojetores/datashow', 'Câmeras fotográficas', 'Equipamento de iluminação', 'Equipamento de circo', 'Máquinas de Costura', 'Computador', 'Impressora', 'Quadro branco/verde/preto', 'Outros:'],
-            'allowOther' => true,
-            'allowOtherText' => 'Outros quais?',
+            'options' => ['Instrumentos musicais', 'Equipamento de Som', 'Mesa de som', 'Leitor de DVD/vhs', 'Televisão ', 'Câmera filmadora', 'Projetores', 'Desktops', 'Laptops', 'Servidores de internet', 'Retroprojetores/datashow', 'Câmeras fotográficas', 'Equipamento de iluminação', 'Equipamento de circo', 'Máquinas de Costura', 'Computador', 'Impressora', 'Quadro branco/verde/preto', 'Outros'],
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
+        ));
+
+        $this->registerAgentMetadata('itens_presentes_organizacao_outro', array(
+            'label' => 'Outros quais?',
+            'type' => 'text'
         ));
 
         $this->registerAgentMetadata('origem_recursos_organizacao', array(
             'label' => 'Qual a origem dos recursos da organização?',
             'type' => 'multiselect',
-            'options' => ['Receita de mensalidade do público atendido pelo Ponto', 'Doações de igrejas', 'Organismo de fomento internacional (ONU, Bird, Banco Mundial, Cida, etc.)', 'Recursos de governos estrangeiros', 'Multinacionais', 'Banco de fomento nacional (BNDS, BNB, Banco do Brasil, Caixa)', 'Fundos de incentivo a cultura', 'Sistema S (Sebrae, Senai, Sesi, Senac, Sesc)', 'ONGs/fundações internacionais', 'Empresas públicas nacionais', 'Outros programas do MinC', 'Recursos do governo federal (que não do MInC)', 'ONGs/fundações nacionais', 'Editais/Lei de incentivo fiscal', 'Recursos de governos estaduais', 'Empresas privadas nacionais', 'Ganhos de aplicação financeira', 'Doações de pessoas físicas', 'Recursos de governos municipais', 'Prêmios', 'Receita de produtos e serviços produzidos pela organização (inclui receita de bilheteria de eventos)', 'Outro:'],
-            'allowOther' => true,
-            'allowOtherText' => 'Outro qual ?',
+            'options' => ['Receita de mensalidade do público atendido pelo Ponto', 'Doações de igrejas', 'Organismo de fomento internacional (ONU, Bird, Banco Mundial, Cida, etc.)', 'Recursos de governos estrangeiros', 'Multinacionais', 'Banco de fomento nacional (BNDS, BNB, Banco do Brasil, Caixa)', 'Fundos de incentivo a cultura', 'Sistema S (Sebrae, Senai, Sesi, Senac, Sesc)', 'ONGs/fundações internacionais', 'Empresas públicas nacionais', 'Outros programas do MinC', 'Recursos do governo federal (que não do MInC)', 'ONGs/fundações nacionais', 'Editais/Lei de incentivo fiscal', 'Recursos de governos estaduais', 'Empresas privadas nacionais', 'Ganhos de aplicação financeira', 'Doações de pessoas físicas', 'Recursos de governos municipais', 'Prêmios', 'Receita de produtos e serviços produzidos pela organização (inclui receita de bilheteria de eventos)', 'Outros'],
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
         ));
 
+        $this->registerAgentMetadata('origem_recursos_organizacao_outro', array(
+            'label' => 'Outros quais?',
+            'type' => 'text'
+        ));
+
         $this->registerAgentMetadata('despesas_organizacao', array(
             'label' => 'Assinale quais despesas fazem parte dos gastos da organização *',
             'type' => 'multiselect',
-            'options' => ['Pagamento de pessoal', 'Aluguel de imóvel', 'Energia/Água/Gás', 'Telefone/internet', 'Verba para divulgação', 'Transporte e combustível', 'Manutenção de máquinas', 'Material de escritório', 'Alimentação', 'Bolsa ou auxílio para público', 'Viagens', 'Outros:'],
+            'options' => ['Pagamento de pessoal', 'Aluguel de imóvel', 'Energia/Água/Gás', 'Telefone/internet', 'Verba para divulgação', 'Transporte e combustível', 'Manutenção de máquinas', 'Material de escritório', 'Alimentação', 'Bolsa ou auxílio para público', 'Viagens', 'Outros'],
             'allowOther' => true,
             'allowOtherText' => 'Especifique outras despesas:',
             'validations' => [
@@ -612,15 +679,23 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
             ]
         ));
 
+        $this->registerAgentMetadata('despesas_organizacao_outro', array(
+            'label' => 'Outros quais?',
+            'type' => 'text'
+        ));
+
         $this->registerAgentMetadata('medidas_acessibilidade_organizacao', array(
             'label' => 'A organização/coletivo cultural adota medidas de acessibilidade em suas atividades e espaços? Se sim, em quais dimensões as medidas são aplicadas? (Selecione todas as que se aplicam)',
             'type' => 'multiselect',
-            'options' => ['Acessibilidade física (ex.: rampas, elevadores, banheiros acessíveis)', 'Acessibilidade comunicacional (ex.: intérpretes de Libras, legendas, materiais em braille)', 'Acessibilidade atitudinal (ex.: treinamentos de sensibilização, políticas inclusivas)', 'Acessibilidade digital (ex.: sites acessíveis, aplicativos com suporte para tecnologias assistivas)', 'Acessibilidade programática (ex.: adequação de horários, adaptação de conteúdo)', 'Acessibilidade metodológica (ex.: adaptação de métodos de ensino, abordagens pedagógicas inclusivas)', 'Acessibilidade natural (ex.: trilhas acessíveis, áreas de lazer adaptadas)', 'Não possui medidas de acessibilidade', 'Outro:'],
-            'allowOther' => true,
-            'allowOtherText' => 'Especifique outras medidas de acessibilidade:',
+            'options' => ['Acessibilidade física (ex.: rampas, elevadores, banheiros acessíveis)', 'Acessibilidade comunicacional (ex.: intérpretes de Libras, legendas, materiais em braille)', 'Acessibilidade atitudinal (ex.: treinamentos de sensibilização, políticas inclusivas)', 'Acessibilidade digital (ex.: sites acessíveis, aplicativos com suporte para tecnologias assistivas)', 'Acessibilidade programática (ex.: adequação de horários, adaptação de conteúdo)', 'Acessibilidade metodológica (ex.: adaptação de métodos de ensino, abordagens pedagógicas inclusivas)', 'Acessibilidade natural (ex.: trilhas acessíveis, áreas de lazer adaptadas)', 'Não possui medidas de acessibilidade', 'Outros'],
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
+        ));
+
+        $this->registerAgentMetadata('medidas_acessibilidade_organizacao_outro', array(
+            'label' => 'Outros quais?',
+            'type' => 'text'
         ));
 
         $this->registerAgentMetadata('participou_atividade_rnpcmr_organizacao', array(
