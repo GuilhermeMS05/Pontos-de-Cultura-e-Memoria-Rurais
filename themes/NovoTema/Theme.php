@@ -172,7 +172,10 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         $this->registerAgentMetadata('quais_acoes_foram_desenvolvidos_outros', array(
             'label' => 'Outros quais?',
-            'type' => 'text'
+            'type' => 'text',
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
         ));
 
         $this->registerAgentMetadata('impactos_mudancas_climaticas', array(
@@ -213,7 +216,10 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         $this->registerAgentMetadata('impactos_mudancas_climaticas_outras', array(
             'label' => 'Outras quais?',
-            'type' => 'text'
+            'type' => 'text',
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
         ));
 
         $this->registerAgentMetadata('quantas_pessoas_beneficiadas_por_mes', array(
@@ -256,7 +262,10 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         $this->registerAgentMetadata('funcao_exerce_organizacao_outra', array(
             'label' => 'Outra qual?',
-            'type' => 'text'
+            'type' => 'text',
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
         ));
         
         $this->registerAgentMetadata('orientacao_sexual_organizacao', array(
@@ -270,7 +279,10 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         $this->registerAgentMetadata('orientacao_sexual_organizacao_outra', array(
             'label' => 'Outra qual?',
-            'type' => 'text'
+            'type' => 'text',
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
         ));
 
         $this->registerAgentMetadata('identidade_genero_organizacao', array(
@@ -284,7 +296,10 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         $this->registerAgentMetadata('identidade_genero_organizacao_outra', array(
             'label' => 'Outra qual?',
-            'type' => 'text'
+            'type' => 'text',
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
         ));
 
         $this->registerAgentMetadata('idade_organizacao', array(
@@ -307,7 +322,10 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         $this->registerAgentMetadata('raca_cor_etnia_organizacao_outro', array(
             'label' => 'Outro qual?',
-            'type' => 'text'
+            'type' => 'text',
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
         ));
 
         $this->registerAgentMetadata('vinculo_trabalho_organizacao', array(
@@ -384,7 +402,10 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         $this->registerAgentMetadata('orientacao_sexual_equipe_organizacao_outra', array(
             'label' => 'Outras quais?',
-            'type' => 'text'
+            'type' => 'text',
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
         ));
 
         $this->registerAgentMetadata('identidade_genero_equipe_organizacao', array(
@@ -398,7 +419,10 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         $this->registerAgentMetadata('identidade_genero_equipe_organizacao_outra', array(
             'label' => 'Outras quais?',
-            'type' => 'text'
+            'type' => 'text',
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
         ));
 
         $this->registerAgentMetadata('raca_cor_etnia_equipe_organizacao', array(
@@ -412,7 +436,10 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         $this->registerAgentMetadata('raca_cor_etnia_equipe_organizacao_outro', array(
             'label' => 'Outros quais?',
-            'type' => 'text'
+            'type' => 'text',
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
         ));
 
         $this->registerAgentMetadata('deficiencia_equipe_organizacao', array(
@@ -435,7 +462,10 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         $this->registerAgentMetadata('quais_pessoas_participam_equipe_organizacao_outras', array(
             'label' => 'Outras quais?',
-            'type' => 'text'
+            'type' => 'text',
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
         ));
 
         $this->registerAgentMetadata('quais_vinculos_trabalho_equipe_organizacao', array(
@@ -506,12 +536,10 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         $this->registerAgentMetadata('programa_faz_parte_organizacao_outro', array(
             'label' => 'Outros quais?',
-            'type' => 'text'
-        ));
-
-        $this->registerAgentMetadata('quais_pessoas_participam_equipe_organizacao_outras', array(
-            'label' => 'Outras quais?',
-            'type' => 'text'
+            'type' => 'text',
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
         ));
 
         $this->registerAgentMetadata('escala_atuacao_organizacao', array(
@@ -536,7 +564,10 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         $this->registerAgentMetadata('territorio_povos_comunidades_organizacao_outro', array(
             'label' => 'Outro qual?',
-            'type' => 'text'
+            'type' => 'text',
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
         ));
 
         $this->registerAgentMetadata('infraestrutura_presente_organizacao', array(
@@ -550,7 +581,10 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         $this->registerAgentMetadata('infraestrutura_presente_organizacao_outra', array(
             'label' => 'Outras quais?',
-            'type' => 'text'
+            'type' => 'text',
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
         ));
 
         $this->registerAgentMetadata('linguagens_artisticas_organizacao', array(
@@ -600,7 +634,10 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         $this->registerAgentMetadata('realiza_atividades_organizacao_outro', array(
             'label' => 'Outros quais?',
-            'type' => 'text'
+            'type' => 'text',
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
         ));
 
         $this->registerAgentMetadata('sede_propria_condicao_organizacao', array(
@@ -614,7 +651,10 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         $this->registerAgentMetadata('sede_propria_condicao_organizacao_outro', array(
             'label' => 'Outros quais?',
-            'type' => 'text'
+            'type' => 'text',
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
         ));
 
         $this->registerAgentMetadata('sede_propria_dificuldades_organizacao', array(
@@ -637,7 +677,10 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         $this->registerAgentMetadata('sede_propria_espacos_organizacao_outro', array(
             'label' => 'Outros quais?',
-            'type' => 'text'
+            'type' => 'text',
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
         ));
 
         $this->registerAgentMetadata('itens_presentes_organizacao', array(
@@ -651,7 +694,10 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         $this->registerAgentMetadata('itens_presentes_organizacao_outro', array(
             'label' => 'Outros quais?',
-            'type' => 'text'
+            'type' => 'text',
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
         ));
 
         $this->registerAgentMetadata('origem_recursos_organizacao', array(
@@ -665,15 +711,16 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         $this->registerAgentMetadata('origem_recursos_organizacao_outro', array(
             'label' => 'Outros quais?',
-            'type' => 'text'
+            'type' => 'text',
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
         ));
 
         $this->registerAgentMetadata('despesas_organizacao', array(
             'label' => 'Assinale quais despesas fazem parte dos gastos da organização *',
             'type' => 'multiselect',
             'options' => ['Pagamento de pessoal', 'Aluguel de imóvel', 'Energia/Água/Gás', 'Telefone/internet', 'Verba para divulgação', 'Transporte e combustível', 'Manutenção de máquinas', 'Material de escritório', 'Alimentação', 'Bolsa ou auxílio para público', 'Viagens', 'Outros'],
-            'allowOther' => true,
-            'allowOtherText' => 'Especifique outras despesas:',
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
@@ -681,7 +728,10 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         $this->registerAgentMetadata('despesas_organizacao_outro', array(
             'label' => 'Outros quais?',
-            'type' => 'text'
+            'type' => 'text',
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
         ));
 
         $this->registerAgentMetadata('medidas_acessibilidade_organizacao', array(
@@ -695,7 +745,10 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         $this->registerAgentMetadata('medidas_acessibilidade_organizacao_outro', array(
             'label' => 'Outros quais?',
-            'type' => 'text'
+            'type' => 'text',
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
         ));
 
         $this->registerAgentMetadata('participou_atividade_rnpcmr_organizacao', array(
