@@ -171,7 +171,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         ));
 
         $this->registerAgentMetadata('quais_acoes_foram_desenvolvidos_outros', array(
-            'label' => 'Outros quais?',
+            'label' => 'Outros quais? (caso não se aplique, insira "NSA - Não Se Aplica")',
             'type' => 'text',
             'validations' => [
                 'required' => 'Campo obrigatório'
@@ -215,7 +215,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         ));
 
         $this->registerAgentMetadata('impactos_mudancas_climaticas_outras', array(
-            'label' => 'Outras quais?',
+            'label' => 'Outras quais? (caso não se aplique, insira "NSA - Não Se Aplica")',
             'type' => 'text',
             'validations' => [
                 'required' => 'Campo obrigatório'
@@ -261,7 +261,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         ));
 
         $this->registerAgentMetadata('funcao_exerce_organizacao_outra', array(
-            'label' => 'Outra qual?',
+            'label' => 'Outra qual? (caso não se aplique, insira "NSA - Não Se Aplica")',
             'type' => 'text',
             'validations' => [
                 'required' => 'Campo obrigatório'
@@ -278,7 +278,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         ));
 
         $this->registerAgentMetadata('orientacao_sexual_organizacao_outra', array(
-            'label' => 'Outra qual?',
+            'label' => 'Outra qual? (caso não se aplique, insira "NSA - Não Se Aplica")',
             'type' => 'text',
             'validations' => [
                 'required' => 'Campo obrigatório'
@@ -295,7 +295,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         ));
 
         $this->registerAgentMetadata('identidade_genero_organizacao_outra', array(
-            'label' => 'Outra qual?',
+            'label' => 'Outra qual? (caso não se aplique, insira "NSA - Não Se Aplica")',
             'type' => 'text',
             'validations' => [
                 'required' => 'Campo obrigatório'
@@ -321,7 +321,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         ));
 
         $this->registerAgentMetadata('raca_cor_etnia_organizacao_outro', array(
-            'label' => 'Outro qual?',
+            'label' => 'Outro qual? (caso não se aplique, insira "NSA - Não Se Aplica")',
             'type' => 'text',
             'validations' => [
                 'required' => 'Campo obrigatório'
@@ -401,7 +401,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         ));
 
         $this->registerAgentMetadata('orientacao_sexual_equipe_organizacao_outra', array(
-            'label' => 'Outras quais?',
+            'label' => 'Outras quais? (caso não se aplique, insira "NSA - Não Se Aplica")',
             'type' => 'text',
             'validations' => [
                 'required' => 'Campo obrigatório'
@@ -418,7 +418,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         ));
 
         $this->registerAgentMetadata('identidade_genero_equipe_organizacao_outra', array(
-            'label' => 'Outras quais?',
+            'label' => 'Outras quais? (caso não se aplique, insira "NSA - Não Se Aplica")?',
             'type' => 'text',
             'validations' => [
                 'required' => 'Campo obrigatório'
@@ -435,7 +435,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         ));
 
         $this->registerAgentMetadata('raca_cor_etnia_equipe_organizacao_outro', array(
-            'label' => 'Outros quais?',
+            'label' => 'Outros quais? (caso não se aplique, insira "NSA - Não Se Aplica")',
             'type' => 'text',
             'validations' => [
                 'required' => 'Campo obrigatório'
@@ -461,7 +461,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         ));
 
         $this->registerAgentMetadata('quais_pessoas_participam_equipe_organizacao_outras', array(
-            'label' => 'Outras quais?',
+            'label' => 'Outras quais? (caso não se aplique, insira "NSA - Não Se Aplica")?',
             'type' => 'text',
             'validations' => [
                 'required' => 'Campo obrigatório'
@@ -535,7 +535,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         ));
 
         $this->registerAgentMetadata('programa_faz_parte_organizacao_outro', array(
-            'label' => 'Outros quais?',
+            'label' => 'Outros quais? (caso não se aplique, insira "NSA - Não Se Aplica")?',
             'type' => 'text',
             'validations' => [
                 'required' => 'Campo obrigatório'
@@ -555,15 +555,13 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
             'label' => 'Está em território de povos e comunidades tradicionais?',
             'type' => 'multiselect',
             'options' => ['Povos Indígenas', 'Quilombolas', 'Seringueiros', 'Castanheiros', 'Quebradeiras de coco-de-babaçu', 'Faxinalenses', 'Pescadores Artesanais', 'Marisqueiras', 'Ribeirinhos', 'Vardejeiros', 'Caiçaras', 'Praieiros', 'Sertanejos', 'Jangadeiros', 'Ciganos', 'Açorianos', 'Campeiros', 'Varzanteiros', 'Pantaneiros', 'Geraizeiros', 'Caatingueiros', 'Retireiros do Araguaia', 'Ilhéus', 'Morroquianos', 'Catadores de Mangaba', 'Extrativistas Costeiros e Marihos', 'Extrativistas', 'Fundo e fecho de pasto', 'Cipozeiros', 'Cablocos', 'Benzendeiros', 'Apanhadores de Terreiro/Povos e Comunidades de Matriz Africana', 'Raizeiros', 'Não', 'Outro'],
-            'allowOther' => true,
-            'allowOtherText' => 'Outra qual?',
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
         ));
 
         $this->registerAgentMetadata('territorio_povos_comunidades_organizacao_outro', array(
-            'label' => 'Outro qual?',
+            'label' => 'Outro qual? (caso não se aplique, insira "NSA - Não Se Aplica")',
             'type' => 'text',
             'validations' => [
                 'required' => 'Campo obrigatório'
@@ -580,7 +578,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         ));
 
         $this->registerAgentMetadata('infraestrutura_presente_organizacao_outra', array(
-            'label' => 'Outras quais?',
+            'label' => 'Outras quais? (caso não se aplique, insira "NSA - Não Se Aplica")?',
             'type' => 'text',
             'validations' => [
                 'required' => 'Campo obrigatório'
@@ -590,7 +588,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         $this->registerAgentMetadata('linguagens_artisticas_organizacao', array(
             'label' => 'Assinale as linguagens artísticas que são desenvolvidas pela organização',
             'type' => 'multiselect',
-            'options' => ['Música', 'Manifestações populares', 'Audiovisual', 'Teatro', 'Literatura', 'Artesanato', 'Dança', 'Artes Plásticas', 'Fotografia', 'Cineclube', 'Artes Gráficas', 'Artes Visuais', 'Cinema', 'Arte Circense '],
+            'options' => ['Música', 'Manifestações populares', 'Audiovisual', 'Teatro', 'Literatura', 'Artesanato', 'Dança', 'Artes Plásticas', 'Fotografia', 'Cineclube', 'Artes Gráficas', 'Artes Visuais', 'Cinema', 'Arte Circense'],
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
@@ -633,7 +631,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         ));
 
         $this->registerAgentMetadata('realiza_atividades_organizacao_outro', array(
-            'label' => 'Outros quais?',
+            'label' => 'Outros quais? (caso não se aplique, insira "NSA - Não Se Aplica")?',
             'type' => 'text',
             'validations' => [
                 'required' => 'Campo obrigatório'
@@ -650,7 +648,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         ));
 
         $this->registerAgentMetadata('sede_propria_condicao_organizacao_outro', array(
-            'label' => 'Outros quais?',
+            'label' => 'Outros quais? (caso não se aplique, insira "NSA - Não Se Aplica")?',
             'type' => 'text',
             'validations' => [
                 'required' => 'Campo obrigatório'
@@ -676,7 +674,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         ));
 
         $this->registerAgentMetadata('sede_propria_espacos_organizacao_outro', array(
-            'label' => 'Outros quais?',
+            'label' => 'Outros quais? (caso não se aplique, insira "NSA - Não Se Aplica")?',
             'type' => 'text',
             'validations' => [
                 'required' => 'Campo obrigatório'
@@ -693,7 +691,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         ));
 
         $this->registerAgentMetadata('itens_presentes_organizacao_outro', array(
-            'label' => 'Outros quais?',
+            'label' => 'Outros quais? (caso não se aplique, insira "NSA - Não Se Aplica")?',
             'type' => 'text',
             'validations' => [
                 'required' => 'Campo obrigatório'
@@ -710,7 +708,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         ));
 
         $this->registerAgentMetadata('origem_recursos_organizacao_outro', array(
-            'label' => 'Outros quais?',
+            'label' => 'Outros quais? (caso não se aplique, insira "NSA - Não Se Aplica")?',
             'type' => 'text',
             'validations' => [
                 'required' => 'Campo obrigatório'
@@ -727,7 +725,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         ));
 
         $this->registerAgentMetadata('despesas_organizacao_outro', array(
-            'label' => 'Outros quais?',
+            'label' => 'Outros quais? (caso não se aplique, insira "NSA - Não Se Aplica")?',
             'type' => 'text',
             'validations' => [
                 'required' => 'Campo obrigatório'
@@ -744,7 +742,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         ));
 
         $this->registerAgentMetadata('medidas_acessibilidade_organizacao_outro', array(
-            'label' => 'Outros quais?',
+            'label' => 'Outros quais? (caso não se aplique, insira "NSA - Não Se Aplica")?',
             'type' => 'text',
             'validations' => [
                 'required' => 'Campo obrigatório'
