@@ -20,6 +20,7 @@ $this->import('
             'representante_legal_organizacao', 
             'funcao_exerce_organizacao',
             'funcao_exerce_organizacao_outra',
+            'idade_organizacao',
             'orientacao_sexual_organizacao',
             'orientacao_sexual_organizacao_outra',
             'identidade_genero_organizacao',

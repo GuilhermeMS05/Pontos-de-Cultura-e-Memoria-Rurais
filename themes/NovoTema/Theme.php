@@ -105,6 +105,11 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
             $this->part('instancias_participacao', ['entity' => $this->data->entity]);
         });
 
+        // Comunicacao e Conectividade
+        $app->hook('template(agent.edit.tabs):end', function () {
+            $this->part('comunicacao_conectividade', ['entity' => $this->data->entity]);
+        });
+
         // Publicar assets
         $app->hook('view.render(<<*>>):before', function () use ($app) {
             $this->_publishAssets();
@@ -263,6 +268,15 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         $this->registerAgentMetadata('funcao_exerce_organizacao_outra', array(
             'label' => 'Outra qual? (caso não se aplique, insira "NSA - Não Se Aplica")',
             'type' => 'text',
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
+        ));
+
+        $this->registerAgentMetadata('idade_organizacao', array(
+            'label' => 'Qual a sua idade?',
+            'type' => 'select',
+            'options' => ['De 18 a 29', 'De 30 a 39', 'De 40 a 50', 'De 51 a 60', 'De 61 a 70', 'de  70 a 80', 'Mais que 80'],
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
@@ -480,7 +494,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         // Diagnóstico - Organização
         $this->registerAgentMetadata('quantos_habitantes_organizacao', array(
-            'label' => 'Quais vínculo de trabalho tem sido estabelecido na organização?',
+            'label' => 'Qual a população da sua cidade?',
             'type' => 'select',
             'options' => ['Menos de 5 mil habitantes', '5 mil e 10 mil habitantes', '10 mil e 15 mil habitantes', '15 mil a 30 mil habitantes', '30 mil a 50 mil habitantes', '50 a 80 mil habitantes', '80 a 100 mil habitantes', 'mais de 100 mil habitantes'],
             'validations' => [
@@ -490,7 +504,17 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         $this->registerAgentMetadata('quantos_anos_atua_organizacao', array(
             'label' => 'Há quantos anos a organização atua?',
-            'type' => 'text',
+            'type' => 'select',
+            'options' => ['De 1 a 2 anos', 'De 3 a 5 anos', 'De 6 a 10 anos', 'De 11 a 15 anos', 'De 16 a 20 anos', 'De 21 a 30 anos', 'de 31 a 40 anos', 'Mais de 40 anos'],
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
+        ));
+
+        $this->registerAgentMetadata('conhece_cultura_viva', array(
+            'label' => 'Você conheve a Cultura Viva?',
+            'type' => 'select',
+            'options' => ['Sim', 'Não'],
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
@@ -791,9 +815,17 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
                 'required' => 'Campo obrigatório'
             ]
         ));
+        $this->registerAgentMetadata('acervo_ou_documentacao_descreva', array(
+            'label' => 'Descreva brevemente o acervo ou documentação mantida pela organização:',
+            'type' => 'text',
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
+        ));
         $this->registerAgentMetadata('eventos_ou_atividades', array(
             'label' => 'Que tipo de eventos ou atividades culturais são realizados na sua organização para promover a memória cultural?',
-            'type' => 'text',
+            'type' => 'multiselect',
+            'options' => ['Realização de oficinas, cursos e vivências com foco em saberes tradicionais, expressões culturais locais e práticas comunitárias. (Inclui atividades como culinária tradicional, artesanato, bordado, medicina popular, construção de instrumentos, entre outras.)', 'Promoção de apresentações artísticas e culturais em espaços comunitários, escolas, feiras e festejos populares. (Abrange teatro, música, dança, contação de histórias, rodas de capoeira, cortejos e manifestações culturais diversas.)', 'Criação e fortalecimento de grupos e coletivos artísticos vinculados à cultura popular, à juventude rural e às tradições locais. (Apoia a formação de grupos de teatro, dança, música, cirandas, folias, maracatus, cocos, entre outros.)', 'Dinamização de espaços culturais, bibliotecas comunitárias, museus locais, casas de memória ou sedes de coletivos culturais. (Inclui ações de organização, programação cultural, acervo, mediação, circulação e acesso da comunidade a esses espaços.)', 'Produção e difusão de conteúdos culturais em formatos digitais e físicos, como vídeos, documentários, podcasts, cordéis, zines e exposições. (Voltado à valorização da memória, das histórias locais, da identidade rural e das culturas originárias e afro-brasileiras.)', 'Realização de festivais, encontros culturais, mostras artísticas e feiras de troca de saberes em territórios rurais e periurbanos. (Com foco em articulação comunitária, circulação artística e valorização da diversidade cultural dos territórios.)', 'Criação e execução de trilhas culturais, caminhadas da memória e ações de reconhecimento e mapeamento dos territórios culturais. (Voltadas à valorização do patrimônio material e imaterial, das paisagens e das relações afetivas com o território.)', 'Promoção de ações formativas em cultura, comunicação comunitária e direitos culturais com foco em juventudes e educadores populares. (Oficinas, rodas de conversa, ciclos de formação e ações de multiplicação voltadas ao fortalecimento da cidadania cultural.)', 'Integração entre cultura, agroecologia e meio ambiente por meio de vivências, celebrações dos ciclos da natureza e práticas sustentáveis. (Inclui hortas culturais, festas de colheita, culinária agroecológica e ações de sensibilização ambiental com linguagem cultural.)', 'Fortalecimento de redes culturais territoriais por meio de encontros, fóruns, grupos de trabalho e articulações com políticas públicas. (Apoia o engajamento em fóruns de cultura, conselhos municipais, redes de Pontos de Cultura, comitês e articulações setoriais.)'],
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
@@ -807,7 +839,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
             ]
         ));
         $this->registerAgentMetadata('criacao_preservacao_novas_manifestacoes_culturais_se_sim', array(
-            'label' => 'Se sim, como isso acontece?',
+            'label' => 'Se sim, como isso acontece? Ou inserir NSA',
             'type' => 'text',
             'validations' => [
                 'required' => 'Campo obrigatório'
@@ -875,6 +907,13 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
             'label' => 'Há saneamento básico na sua organização?',
             'type' => 'select',
             'options' => ['Sim', 'Não'],
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
+        ));
+        $this->registerAgentMetadata('saneamento_basico_organizacao_se_nao', array(
+            'label' => 'Se não, como o esgoto tem sido descartado? Ou inserir NSA',
+            'type' => 'text',
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
@@ -1046,7 +1085,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         $this->registerAgentMetadata('sente_suficientes_garantir_renda_justo', array(
             'label' => 'Você sente que eles são suficientes para garantir uma renda justa?',
             'type' => 'select',
-            'options' => ['Sim', 'Não'],
+            'options' => ['Sim', 'Não', 'Não se aplica'],
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
@@ -1192,7 +1231,8 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         ));
         $this->registerAgentMetadata('principais_desafios_integrar_redes_parcerias', array(
             'label' => 'Quais são os principais desafios que a sua organização enfrenta ao tentar se integrar em redes ou parcerias?',
-            'type' => 'text',
+            'type' => 'multiselect',
+            'options' => ['Saber das atividades', 'Transporte para ir nas reuniões', 'Falta de tempo nos horarios das reuniões'],
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]
@@ -1230,7 +1270,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
             ]
         ));
         $this->registerAgentMetadata('avalia_importancia_participacao_instancias', array(
-            'label' => 'Como você avalia a importância da sua participação nessas instâncias? De que maneira isso influencia as decisões locais?',
+            'label' => 'Como você avalia a importância da sua participação nessas instâncias?',
             'type' => 'text',
             'validations' => [
                 'required' => 'Campo obrigatório'
@@ -1310,6 +1350,47 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
             ]
         ));
         // Instancias de participacao
+        // comunicação e conectividade
+        $this->registerAgentMetadata('acoes_produtos_comunicacao_organizacao', array(
+            'label' => 'Qual(is) ação(ões) ou produto(s) de comunicação foi(ram) desenvolvido(s)?',
+            'type' => 'multiselect',
+            'options' => ['Página Instagram', 'Pagina em outras redes', 'Email', 'Boletim', 'Livro', 'Revista', 'Cartilha', 'Mapa', 'Documentario', 'Videos Registro', 'Fotos Registro', 'Jornal Impresso'],
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
+        ));
+        $this->registerAgentMetadata('como_divulga_atividades', array(
+            'label' => 'Como você divulga suas atividades?',
+            'type' => 'multiselect',
+            'options' => ['Whatsapp', 'Instagram', 'Site', 'Impressos', 'Imprensa local'],
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
+        ));
+        $this->registerAgentMetadata('tipo_conectividade', array(
+            'label' => 'Na localidade do ponto de cultural qual o tipo de conectividade?',
+            'type' => 'multiselect',
+            'options' => ['Banda Larga com Wifi', 'Dados Móveis via celular', 'Dados Moveis e Banda Larga com Wifi', 'Não tem'],
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
+        ));
+        $this->registerAgentMetadata('como_conecta', array(
+            'label' => 'Como se conecta?',
+            'type' => 'multiselect',
+            'options' => ['Através do Celular', 'Atraves do computador pessoal', 'Atraves do computador da entidade ou coletivo', 'Outras'],
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
+        ));
+        $this->registerAgentMetadata('como_conecta_outras', array(
+            'label' => 'Outras quais? (caso não se aplique, insira "NSA - Não Se Aplica")?',
+            'type' => 'text',
+            'validations' => [
+                'required' => 'Campo obrigatório'
+            ]
+        ));
+        // comunicação e conectividade
     }
 
     static function _getTexts()

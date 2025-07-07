@@ -13,13 +13,15 @@ $this->import('
 <mc-container>
     <mc-card>
         <mc-card__title>
-            <h3>Saneamento Básico</h3>
+            <h3>Comunicação e Conectividade</h3>
         </mc-card__title>
         <?php 
         $fields = [
-            'saneamento_basico_organizacao',
-            'saneamento_basico_organizacao_se_nao',
-            'saneamento_basico_comunidade'
+            'acoes_produtos_comunicacao_organizacao', 
+            'como_divulga_atividades', 
+            'tipo_conectividade',
+            'como_conecta',
+            'como_conecta_outras'
         ]; 
         ?>
         <?php foreach ($fields as $field): ?>

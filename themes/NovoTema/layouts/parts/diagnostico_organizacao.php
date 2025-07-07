@@ -19,6 +19,7 @@ $this->import('
         $fields = [
             'quantos_habitantes_organizacao',
             'quantos_anos_atua_organizacao',
+            'conhece_cultura_viva',
             'certificada_organizacao',
             'gostaria_ser_certificada_organizacao',
             'estagio_desenvolvimento_organizacao',
