@@ -20,6 +20,7 @@ $this->import('
             'atividades_pre_memo_cult', 
             'atividades_pre_memo_cult_se_sim', 
             'acervo_ou_documentacao',
+            'acervo_ou_documentacao_descreva',
             'eventos_ou_atividades',
             'criacao_preservacao_novas_manifestacoes_culturais',
             'criacao_preservacao_novas_manifestacoes_culturais_se_sim'
