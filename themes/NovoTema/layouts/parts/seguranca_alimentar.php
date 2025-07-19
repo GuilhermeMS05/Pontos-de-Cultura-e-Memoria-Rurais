@@ -27,11 +27,6 @@ $this->import('
             'hortas_comunitarias',
             'hortas_comunitarias_se_sim',
             'hortas_comunitarias_se_sim_segundo',
-            'feiras_livres',
-            'feiras_livres_se_sim',
-            'iniciativas_colaborativas_producao_consumo',
-            'iniciativas_colaborativas_producao_consumo_se_sim',
-            'principais_desafios_seguranca_alimentar',
             'apoio_recurso_melhorar_producao_comercializacao'
         ]; 
         ?>

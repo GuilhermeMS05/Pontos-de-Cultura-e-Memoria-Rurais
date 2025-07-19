@@ -24,7 +24,12 @@ $this->import('
             'uso_agrotoxicos_se_sim',
             'perceber_efeitos_uso_agrotoxico',
             'criacao_gados',
-            'criacao_gados_se_sim'
+            'criacao_gados_se_sim',
+            'feiras_livres',
+            'feiras_livres_se_sim',
+            'iniciativas_colaborativas_producao_consumo',
+            'iniciativas_colaborativas_producao_consumo_se_sim',
+            'principais_desafios_seguranca_alimentar',
         ]; 
         ?>
         <?php foreach ($fields as $field): ?>
