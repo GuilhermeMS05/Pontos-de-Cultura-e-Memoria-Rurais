@@ -13,16 +13,12 @@ $this->import('
 <mc-container>
     <mc-card>
         <mc-card__title>
-            <h3>Qualidade da Água</h3>
+            <h3>Diagnóstico - Representante Legal da Organização</h3>
         </mc-card__title>
         <?php 
         $fields = [
-            'agua_comunidade_frequentemente_testada', 
-            'agua_comunidade_frequentemente_testada_se_sim', 
-            'problemas_saude_devido_qualidade_agua',
-            'campanhas_conscientizacao_importancia_qualidade_agua',
-            'campanhas_conscientizacao_importancia_qualidade_agua_se_sim',
-            'medidas_tomadas_organizacao_qualidade_agua'
+            'representante_legal_organizacao',
+            'acesso_internet_organizacao'
         ]; 
         ?>
         <?php foreach ($fields as $field): ?>

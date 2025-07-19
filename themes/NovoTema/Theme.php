@@ -45,6 +45,21 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
             $this->part('informacoes_adicionais', ['entity' => $this->data->entity]);
         });
 
+        // Comunicacao e Conectividade
+        $app->hook('template(agent.edit.tabs):end', function () {
+            $this->part('comunicacao_conectividade', ['entity' => $this->data->entity]);
+        });
+
+        // Politica Nacional Cultura Viva
+        $app->hook('template(agent.edit.tabs):end', function () {
+            $this->part('politica_cultura_viva', ['entity' => $this->data->entity]);
+        });
+
+        // Diagnóstico - Representante Legal
+        $app->hook('template(agent.edit.tabs):end', function () {
+            $this->part('representante_legal', ['entity' => $this->data->entity]);
+        });
+
         // Diagnóstico - Representantes de Organização
         $app->hook('template(agent.edit.tabs):end', function () {
             $this->part('representantes_organizacao', ['entity' => $this->data->entity]);
@@ -60,24 +75,14 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
             $this->part('diagnostico_organizacao', ['entity' => $this->data->entity]);
         });
 
-        // Preservacao da Memoria Cultural
+        // Rede Nacional de Pontos de Cultura e Memórias Rurais
         $app->hook('template(agent.edit.tabs):end', function () {
-            $this->part('preservacao_memoria_cultural', ['entity' => $this->data->entity]);
+            $this->part('rede_nacional', ['entity' => $this->data->entity]);
         });
 
-        // Acesso a agua
+        // Agua e Saneamento
         $app->hook('template(agent.edit.tabs):end', function () {
-            $this->part('acesso_agua', ['entity' => $this->data->entity]);
-        });
-
-        // Saneamento Basico
-        $app->hook('template(agent.edit.tabs):end', function () {
-            $this->part('saneamento_basico', ['entity' => $this->data->entity]);
-        });
-
-        // Qualidade da Agua
-        $app->hook('template(agent.edit.tabs):end', function () {
-            $this->part('qualidade_agua', ['entity' => $this->data->entity]);
+            $this->part('agua_saneamento', ['entity' => $this->data->entity]);
         });
 
         // Uso do Solo e Praticas agricolas
@@ -103,11 +108,6 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         // Instancias e Participacao
         $app->hook('template(agent.edit.tabs):end', function () {
             $this->part('instancias_participacao', ['entity' => $this->data->entity]);
-        });
-
-        // Comunicacao e Conectividade
-        $app->hook('template(agent.edit.tabs):end', function () {
-            $this->part('comunicacao_conectividade', ['entity' => $this->data->entity]);
         });
 
         // Publicar assets
@@ -397,7 +397,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         $this->registerAgentMetadata('interesse_fazer_parte_grupo_organizacao', array(
             'label' => 'Você tem interesse em fazer parte do grupo de Whatsapp para INTEGRAR o Fórum Nacional Territórios Rurais e Cultura Alimentar e colaborar com a Rede do Pontão de Cultura e Memória Rurais, trazendo ideias, propostas e sugestões para fortalecer as pautas de políticas públicas?',
             'type' => 'select',
-            'options' => ['Sim', 'Não'],
+            'options' => ['Sim', 'Não', 'Já estou'],
             'validations' => [
                 'required' => 'Campo obrigatório'
             ]

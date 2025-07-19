@@ -21,7 +21,8 @@ $this->import('
             'como_divulga_atividades', 
             'tipo_conectividade',
             'como_conecta',
-            'como_conecta_outras'
+            'como_conecta_outras',
+            'interesse_fazer_parte_grupo_organizacao'
         ]; 
         ?>
         <?php foreach ($fields as $field): ?>

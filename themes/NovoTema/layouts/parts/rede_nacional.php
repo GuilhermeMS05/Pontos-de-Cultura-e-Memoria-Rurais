@@ -13,17 +13,17 @@ $this->import('
 <mc-container>
     <mc-card>
         <mc-card__title>
-            <h3>Acesso à Água</h3>
+            <h3>Rede Nacional de Pontos de Cultura e Memórias Rurais</h3>
         </mc-card__title>
         <?php 
         $fields = [
-            'principal_fonte_abastecimento', 
-            'facilidade_acesso_agua_potavel', 
-            'facilidade_acesso_agua_potavel_se_nao',
-            'quantidade_agua_disponivel_suficiente',
-            'iniciativas_coleta_armazenamento_chuva',
-            'iniciativas_coleta_armazenamento_chuva_se_sim',
-            'lidar_escassez_agua'
+            'participou_atividade_rnpcmr_organizacao',
+            'participou_atividade_rnpcmr_organizacao_se_sim',
+            'atividades_pre_memo_cult', 
+            'atividades_pre_memo_cult_se_sim',
+            'acervo_ou_documentacao',
+            'acervo_ou_documentacao_descreva',
+            'eventos_ou_atividades',
         ]; 
         ?>
         <?php foreach ($fields as $field): ?>

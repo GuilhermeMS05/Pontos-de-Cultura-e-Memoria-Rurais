@@ -17,7 +17,6 @@ $this->import('
         </mc-card__title>
         <?php 
         $fields = [
-            'representante_legal_organizacao', 
             'funcao_exerce_organizacao',
             'funcao_exerce_organizacao_outra',
             'idade_organizacao',
@@ -31,10 +30,6 @@ $this->import('
             'vinculo_trabalho_organizacao',
             'vinculo_trabalho_remunerado_organizacao',
             'trabalha_voluntariamente_organizacao',
-            'politica_nacional_cultura_viva_organizacao',
-            'pontos_cultura_organizacao',
-            'acesso_internet_organizacao',
-            'interesse_fazer_parte_grupo_organizacao'
         ]; 
         ?>
         <?php foreach ($fields as $field): ?>
